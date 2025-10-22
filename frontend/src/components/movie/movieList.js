@@ -1,0 +1,35 @@
+import React from "react";
+import { Row, Col } from "react-bootstrap";
+import Movie from "./movie";
+import Loader from "../common/loader";
+
+const styles = {
+  movieColumn: {
+    marginBottom: 20,
+  },
+};
+const MovieListComponent = ({ movies, isLoading }) => {
+  const movieColumns = movies
+    ? movies.map((movie) => (
+        <Col
+          style={styles.movieColumn}
+          key={movie.id}
+          xs={12}
+          sm={4}
+          md={3}
+          lg={3}
+        >
+          <Movie movie={movie} />
+        </Col>
+      ))
+    : null;
+
+  return (
+    <Row>
+      {movieColumns}
+      <Loader isLoading={isLoading} />
+    </Row>
+  );
+};
+
+export default MovieListComponent;
