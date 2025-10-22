@@ -1,0 +1,14 @@
+package rs.ac.bg.etf.dipl.enumeration;
+
+public enum CrewRole {
+	PRODUCER,
+	DIRECTOR,
+	WRITTER, 
+	SCREENWRITER,
+	PRODUCTION_DESIGNER,
+	ART_DIRECTOR,
+	COSTUME_DESIGNER,
+	CINEMATOGRAPHER,
+	EDITOR,
+	MUSIC_SUPERVISOR
+}
